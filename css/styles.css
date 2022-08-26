@@ -2,12 +2,12 @@
   --primary-white-color: #ffffff;
   --primary-black-color: #000000;
   --text-color: #212121;
-  --text-grey-color: #757575;
-  --text-light-grey-color: rgba(255, 255, 255, 0.6);
+  --light-text-color: #757575;
+  --opacity-text-color: rgba(255, 255, 255, 0.6);
   --background-color: #2f303a;
-  --background-light-color: #f5f4fa;
+  --light-background-color: #f5f4fa;
   --accent-color: #2196f3;
-  --filter-btn-color: #f5f4fa;
+  --btn-color: #f5f4fa;
 }
 
 body {
@@ -37,9 +37,18 @@ body {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  color: var(--text-color);
+  background-color: var(--btn-color);
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button.active {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  text-align: center;
 }
 
 /* Header */
@@ -50,16 +59,16 @@ body {
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  color: var(--primary-black-color);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
-.logo-accent {
-  color: var(--accent-color);
+.logo-light {
+  color: var(--primary-white-color);
 }
 
 .logo-dark {
-  color: var(--primary-white-color);
+  color: var(--primary-black-color);
 }
 
 .nav-link,
@@ -80,7 +89,7 @@ body {
 }
 
 .header-contacts .link {
-  color: var(--text-grey-color);
+  color: var(--light-text-color);
 }
 
 .nav-link:hover,
@@ -119,16 +128,21 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: var(--text-grey-color);
+  color: var(--light-text-color);
 }
 
 /* Team */
 
 .team {
-  background-color: var(--background-light-color);
+  background-color: var(--light-background-color);
 }
 
-.team .name {
+.team-member {
+  background-color: var(--primary-white-color);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -136,12 +150,11 @@ body {
   text-align: center;
 }
 
-.team .position {
-  font-size: 16px;
+.team-position {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--text-grey-color);
+  color: var(--light-text-color);
 }
 
 /* Footer */
@@ -163,7 +176,7 @@ body {
 
 .footer-contacts .list-link {
   text-decoration: none;
-  color: var(--text-light-grey-color);
+  color: var(--opacity-text-color);
 }
 
 .footer-contacts .list-link:hover,
@@ -176,45 +189,28 @@ body {
 /* Arts */
 
 .filter-button {
-  cursor: pointer;
-  font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  text-align: center;
-  background-color: var(--filter-btn-color);
 }
 
-.filter-button.active {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-}
-
-.filter-button:hover,
-.filter-button:focus {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-}
-
-.work {
+.portfolio-item {
   background-color: var(--primary-white-color);
 }
 
-.work-link {
+.portfolio-link {
   text-decoration: none;
 }
 
-.work-name {
+.portfolio-subtitle {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color);
 }
 
-.work-description {
-  font-size: 16px;
+.portfolio-description {
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(--text-grey-color);
+  color: var(--light-text-color);
 }
