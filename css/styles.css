@@ -34,6 +34,12 @@ dd {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -67,16 +73,16 @@ dd {
 .button {
   display: inline-block;
   cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--btn-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: var(--text-color);
-  background-color: var(--btn-color);
   text-align: center;
-  border-radius: 4px;
-  border: none;
 }
 
 .button:hover,
@@ -84,13 +90,14 @@ dd {
 .button.active {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Header */
 
 .page-header {
   padding: 25px 0;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .main-nav {
@@ -99,12 +106,12 @@ dd {
 }
 
 .logo {
+  color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -135,7 +142,7 @@ dd {
   text-decoration: none;
 }
 
-.site-nav .link{
+.site-nav .link {
   color: var(--text-color);
 }
 
@@ -162,17 +169,26 @@ dd {
 /* Preview */
 
 .preview {
+  padding: 200px 0;
+}
+
+.preview-container {
+  max-width: 696px;
+}
+
+.preview {
   background: var(--background-color);
 }
 
 .preview-title {
+  color: var(--primary-white-color);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary-white-color);
 }
 
 .preview-button {
@@ -183,7 +199,14 @@ dd {
 
 /* Peculiarities */
 
+.peculiarities .list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
 .peculiarities-title {
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -191,10 +214,23 @@ dd {
 }
 
 .peculiarities-text {
+  color: var(--light-text-color);
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: var(--light-text-color);
+}
+
+/* About */
+
+.about {
+  padding-top: 0;
+}
+
+.about .list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 /* Team */
@@ -203,12 +239,26 @@ dd {
   background-color: var(--light-background-color);
 }
 
-.team-member {
-  background-color: var(--primary-white-color);
-  border-radius: 0px 0px 4px 4px;
+.team .list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.team-name {
+.team-member {
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.member-wrapper {
+  padding: 30px 15px;
+}
+
+.member-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -216,52 +266,86 @@ dd {
   text-align: center;
 }
 
-.team-position {
+.member-position {
+  color: var(--light-text-color);
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--light-text-color);
 }
 
 /* Footer */
 
 .footer {
+  padding: 60px 0;
   background: var(--background-color);
 }
 
 .footer-contacts {
+  margin-top: 20px;
   font-style: normal;
 }
 
-.footer-contacts .list-item {
+.footer-contacts .item {
+  color: var(--primary-white-color);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--primary-white-color);
 }
 
-.footer-contacts .list-link {
-  text-decoration: none;
+.footer-contacts .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contacts .link {
   color: var(--opacity-text-color);
+  text-decoration: none;
 }
 
-.footer-contacts .list-link:hover,
-.footer-contacts .list-link:focus {
+.footer-contacts .link:hover,
+.footer-contacts .link:focus {
   color: var(--accent-color);
 }
 
-/* Portfolio */
+/* Portfolio page */
 
 /* Arts */
 
+.arts-title {
+  /* visibility: hidden; ще не проходили, тому поки так */
+  display: none;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+}
+
+.filter .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
+  padding: 6px 22px;
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: 0.03em;
 }
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
 .portfolio-item {
+  border: 1px solid #eeeeee;
+  flex-basis: calc((100% - 60px) / 3);
   background-color: var(--primary-white-color);
+}
+
+.portfolio-wrapper {
+  padding: 20px 24px;
 }
 
 .portfolio-link {
@@ -269,6 +353,7 @@ dd {
 }
 
 .portfolio-subtitle {
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -276,7 +361,7 @@ dd {
 }
 
 .portfolio-description {
+  color: var(--light-text-color);
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(--light-text-color);
 }
