@@ -229,9 +229,10 @@ img {
 }
 
 .peculiarities .item-thumb {
+  height: 120px;
   display: flex;
   justify-content: center;
-  padding: 25px 0;
+  align-items: center;
   margin-bottom: 30px;
   border-radius: 4px;
 
@@ -322,9 +323,13 @@ img {
 }
 
 .social-link {
-  padding: 12px;
+  height: 44px;
+  width: 44px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
+  outline: transparent;
 }
 
 .team .social-icon {
@@ -344,6 +349,10 @@ img {
 
 /* Client */
 
+.client {
+  flex-basis: calc((100% - 5 * 30px) / 6);
+}
+
 .clients-list {
   display: flex;
   margin-top: 50px;
@@ -351,10 +360,14 @@ img {
 }
 
 .client-link {
+  height: 92px;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
-  padding: 16px 31px;
+  outline: transparent;
   color: var(--icon-color);
 }
 
@@ -387,7 +400,6 @@ img {
 
 .footer .social-title {
   margin-bottom: 20px;
-  margin-top: 12px;
 
   color: var(--primary-white-color);
 
@@ -479,12 +491,6 @@ img {
   background-color: var(--primary-white-color);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .portfolio-wrapper {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
@@ -492,7 +498,15 @@ img {
 }
 
 .portfolio-link {
+  display: block;
   text-decoration: none;
+  outline: transparent;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-subtitle {
