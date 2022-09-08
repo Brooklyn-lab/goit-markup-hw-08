@@ -144,14 +144,39 @@ img {
   text-decoration: none;
   display: inline-block;
   padding: 25px 0;
+  outline: transparent;
 }
 
 .site-nav .link {
+  position: relative;
   color: var(--text-color);
+  transition: color 250ms;
+}
+
+.site-nav .link::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--accent-color);
 }
 
 .site-nav .link.accent {
   color: var(--accent-color);
+}
+
+.site-nav .link.accent::after {
+  opacity: 1;
+}
+
+.site-nav .link:hover::after,
+.site-nav .link:focus::after {
+  opacity: 1;
 }
 
 .contacts-nav {
