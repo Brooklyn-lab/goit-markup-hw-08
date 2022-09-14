@@ -1,0 +1,36 @@
+.about {
+  padding-top: 0;
+
+  &__list {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    position: relative;
+  }
+
+  &__item-overlay {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__item-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+  }
+}

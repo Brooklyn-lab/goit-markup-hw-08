@@ -1,0 +1,74 @@
+.footer {
+  padding: 60px 0;
+  background-color: var(--background-color);
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    color: var(--primary-white-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__social-link {
+    color: var(--primary-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__social-icon {
+    fill: currentColor;
+  }
+
+  &__form {
+    max-width: 570px;
+    width: 100%;
+    margin-left: auto;
+  }
+}
+.contacts {
+  margin-top: 20px;
+  font-style: normal;
+
+  &__list {
+  }
+
+  &__item {
+    color: var(--primary-white-color);
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    color: var(--opacity-text-color);
+    text-decoration: none;
+    outline: transparent;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
