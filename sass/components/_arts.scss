@@ -1,0 +1,111 @@
+.arts {
+  &__filter {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__filter-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__filter-button {
+    padding: 6px 22px;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    outline: transparent;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover,
+    &.active {
+      color: var(--primary-white-color);
+      background-color: var(--accent-color);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+}
+
+.portfolio {
+  &__item {
+    background-color: var(--primary-white-color);
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    outline: transparent;
+    transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+      .portfolio__img-overlay {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__img-wrapp {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    overflow-y: auto;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__img-text {
+    color: var(--primary-white-color);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+  }
+
+  &__wrapper {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: 0px;
+  }
+
+  &__subtitle {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--text-color);
+  }
+
+  &__description {
+    color: var(--light-text-color);
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+  }
+}

@@ -1,0 +1,54 @@
+.form-request {
+  &__title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__field {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+
+    color: var(--light-text-color);
+  }
+
+  &__input {
+    position: relative;
+    padding: 12px 12px 12px 42px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__textarea {
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+  }
+
+  &__terms {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &__button {
+    min-width: 200px;
+  }
+}
