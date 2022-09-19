@@ -2,13 +2,32 @@
   border-bottom: 1px solid #ececec;
 
   &__logo {
-    padding: 24px 0 25px;
+    padding: 16px 0;
+
+    @media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+      padding: 26px 0;
+    }
+
+    @media screen and (min-width: $desctop) {
+      padding: 24px 0 25px;
+    }
   }
 }
 
 .main-nav {
   display: flex;
   align-items: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 93px;
+
+    @media screen and (max-width: $pre-tablet) {
+      display: none;
+    }
+  }
 
   &__list {
     display: flex;
@@ -54,7 +73,7 @@
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       bottom: -1px;
       left: 0;
       height: 4px;
@@ -87,4 +106,20 @@
     margin-right: 10px;
     fill: currentColor;
   }
+}
+
+.burger {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  width: 40px;
+  height: 40px;
+
+  display: inline-block;
+  margin: 0 0 0 auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

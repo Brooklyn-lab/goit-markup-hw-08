@@ -1,9 +1,13 @@
 .preview {
   max-width: 1600px;
-  padding: 200px 0;
+  padding: 118px 0;
   margin: 0 auto;
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/preview-bg.jpg"),
-    #c4c4c4 no-repeat center/cover;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/preview-bg.jpg'), #c4c4c4 no-repeat center/cover;
+
+  @media screen and (min-width: $desctop) {
+    padding: 200px 0;
+  }
 
   &__container {
     max-width: 696px;
@@ -13,11 +17,16 @@
     color: var(--primary-white-color);
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.6;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desctop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 
   &__button {

@@ -1,12 +1,11 @@
 .arts {
   &__filter {
     display: flex;
-    justify-content: center;
-  }
+    flex-wrap: wrap;
+    gap: 15px 8px;
 
-  &__filter-item {
-    &:not(:last-child) {
-      margin-right: 8px;
+    @media screen and (min-width: $tablet) {
+      justify-content: center;
     }
   }
 
@@ -30,18 +29,19 @@
   }
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 50px;
+.portfolio {
+  margin-top: 40px;
+
+  @media screen and (min-width: $desctop) {
+    margin-top: 50px;
+  }
 
   &__item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    @media screen and (min-width: $desctop) {
+      width: calc((100% - 2 * 30px) / 3);
+    }
   }
-}
 
-.portfolio {
   &__item {
     background-color: var(--primary-white-color);
   }

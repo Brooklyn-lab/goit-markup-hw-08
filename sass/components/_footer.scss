@@ -3,9 +3,33 @@
   background-color: var(--background-color);
 
   &__container {
-    display: flex;
-    align-items: baseline;
-    gap: 70px;
+    @media screen and (max-width: $pre-desctop) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $desctop) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $tablet) and (max-width: $pre-desctop) {
+      justify-content: space-around;
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: baseline;
+      gap: 70px;
+    }
+  }
+
+  &__social {
+    @media screen and (max-width: $pre-tablet) {
+      margin: 60px 0;
+    }
   }
 
   &__title {
@@ -36,9 +60,14 @@
   }
 
   &__form {
-    max-width: 570px;
+    max-width: 450px;
     width: 100%;
-    margin-left: auto;
+    margin: 0 auto;
+
+    @media screen and (min-width: $desctop) {
+      max-width: 570px;
+      margin: 0 0 0 auto;
+    }
   }
 }
 .contacts {

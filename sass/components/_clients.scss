@@ -1,12 +1,25 @@
 .clients {
   &__list {
+    margin-top: 30px;
     display: flex;
-    margin-top: 50px;
+    flex-wrap: wrap;
     gap: 30px;
+
+    @media screen and (min-width: $desctop) {
+      margin-top: 50px;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 5 * 30px) / 6);
+    width: calc((100% - 1 * 30px) / 2);
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * 30px) / 3);
+    }
+
+    @media screen and (min-width: $desctop) {
+      width: calc((100% - 5 * 30px) / 6);
+    }
   }
 
   &__item-link {
@@ -19,7 +32,8 @@
     border-radius: 4px;
     outline: transparent;
     color: var(--icon-color);
-    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {

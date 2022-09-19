@@ -1,4 +1,8 @@
 .about {
+  @media screen and (max-width: $pre-desctop) {
+    display: none;
+  }
+
   padding-top: 0;
 
   &__list {

@@ -1,5 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-color);
   background-color: var(--primary-white-color);
 }
@@ -34,10 +34,22 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  min-width: 320px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+
+  @media screen and (min-width: $mobail) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    width: 1200px;
+  }
 }
 
 .hidden {
@@ -54,11 +66,41 @@ img {
 /* Section */
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $desctop) {
+    padding: 94px 0;
+  }
 }
 
 .section-title {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+
+//  Cards list
+
+.grid {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 1 * 30px) / 2);
+    }
+
+    @media screen and (min-width: $desctop) {
+      width: calc((100% - 3 * 30px) / 4);
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: $pre-tablet) {
+        margin-bottom: 30px;
+      }
+    }
+  }
 }

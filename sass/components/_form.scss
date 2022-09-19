@@ -49,7 +49,7 @@
   &__terms-checkbox:checked + &__terms-text {
     &::before {
       border-color: transparent;
-      background-image: url("../images/icon-check.svg");
+      background-image: url('../images/icon-check.svg');
       background-size: contain;
       background-origin: border-box;
     }
@@ -59,21 +59,25 @@
     position: relative;
     padding-left: 24px;
 
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--light-text-color);
 
+    @media screen and (min-width: $desctop) {
+      font-size: 14px;
+    }
+
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       left: 0;
       top: 50%;
       transform: translateY(-50%);
       width: 16px;
       height: 15px;
       border: 2px solid var(--text-color);
-      border-radius: 5px;
+      border-radius: 2px;
     }
   }
 
