@@ -47,7 +47,9 @@
   }
 
   &__link {
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     outline: transparent;
     transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,6 +92,7 @@
   }
 
   &__wrapper {
+    flex: 1 0 auto;
     padding: 20px 24px;
     border: 1px solid #eeeeee;
     border-top: 0px;
