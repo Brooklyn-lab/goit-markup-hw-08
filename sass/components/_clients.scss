@@ -3,7 +3,7 @@
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: var(--ident);
 
     @media screen and (min-width: $desctop) {
       margin-top: 50px;
@@ -11,14 +11,15 @@
   }
 
   &__item {
-    width: calc((100% - 1 * 30px) / 2);
+    --items: 2;
+    flex-basis: calc((100% - var(--ident) * (var(--items) - 1)) / var(--items));
 
     @media screen and (min-width: $tablet) {
-      width: calc((100% - 2 * 30px) / 3);
+      --items: 3;
     }
 
     @media screen and (min-width: $desctop) {
-      width: calc((100% - 5 * 30px) / 6);
+      --items: 6;
     }
   }
 
