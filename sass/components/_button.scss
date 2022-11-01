@@ -34,7 +34,7 @@
 
 .content-button:hover,
 .content-button:focus {
-  background: #188ce8;
+  background: var(--accent-color);
 }
 
 .content-button .icon {
